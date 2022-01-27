@@ -16,3 +16,6 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('waitlists', 'WaitlistController@index');
+$router->post('waitlists', 'WaitlistController@store');
